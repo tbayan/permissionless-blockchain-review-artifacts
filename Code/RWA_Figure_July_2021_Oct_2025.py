@@ -56,7 +56,7 @@ plt.rcParams['font.serif'] = ['Times New Roman']
 plt.rcParams['font.size'] = 12
 
 # Plot line chart
-plt.plot(dates, values, color='black', linewidth=2, marker='o', 
+plt.plot(dates, values, color='blue', linewidth=2, marker='o', 
          markersize=4, markerfacecolor='black', markeredgecolor='black')
 
 # Grid

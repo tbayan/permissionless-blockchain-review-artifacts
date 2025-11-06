@@ -1,84 +1,55 @@
-graph TD
-    %% User Entry Point
-    User([User]) --> PrepareWallet[Prepare Wallet]
-    
-    %% Wallet Creation Flow
-    PrepareWallet --> Download[Download]
-    Download --> CreateWallet[Create Wallet]
-    CreateWallet --> MnemonicPhrase[Mnemonic Phrase]
-    
-    %% Security Methods
-    MnemonicPhrase --> SSS[Shamir's Secret Sharing]
-    MnemonicPhrase --> MultiSig[MultiSig]
-    
-    %% Wallet Types
-    CreateWallet --> Keyless[Keyless]
-    Keyless --> UseWallet[Use Wallet]
-    Keyless --> ColdWallet[Cold Wallet]
-    Keyless --> Custody[Custody]
-    
-    %% Hot Wallet Path
-    UseWallet --> HotWallet[Hot Wallet]
-    HotWallet --> DirectWalletConnect[Direct/WalletConnect]
-    
-    %% Cold Wallet Path
-    ColdWallet --> LightApp[Light App]
-    ColdWallet -.QRCode/USB/Bluetooth.-> LightApp
-    
-    %% Non-Custodial Note
-    Custody -.Non-Custodial:<br/>Cloud/MPC.-> LightApp
-    
-    %% DApp Interaction
-    DirectWalletConnect --> DApp[DApp]
+%%{init: {"themeVariables": {
+    "spacing": 40,
+    "edgeSpacingFactor": 1.5,
+    "fontSize": "20px"
+}}}%%
+flowchart TD
+ subgraph Base["Base Infrastructure"]
+        Network["Network"]
+        CDN["CDN"]
+        Browser["Browser"]
+        PC["PC"]
+        Mobile["Mobile"]
+  end
+    User(["**User**"]) --> PrepareWallet["**Prepare Wallet**"]
+    PrepareWallet --> Download["Download"]
+    Download --> CreateWallet["**Create Wallet**"]
+    CreateWallet --> MnemonicPhrase["Mnemonic Phrase"] & Keyless["Keyless"]
+    MnemonicPhrase --> SSS@{ label: "Shamir's Secret Sharing" } & MultiSig["MultiSig"] & BackupWallet["Backup Wallet"]
+    Keyless --> UseWallet["Use Wallet"] & ColdWallet["Cold Wallet"] & Custody["Custody"]
+    UseWallet --> HotWallet["Hot Wallet"]
+    HotWallet --> DirectWalletConnect["Direct/WalletConnect"]
+    ColdWallet --> LightApp["Light App"]
+    ColdWallet -. QRCode<br>USB<br>Bluetooth .-> LightApp
+    Custody -. "Non-Custodial:<br>Cloud/MPC" .-> LightApp
+    DirectWalletConnect --> DApp["**DApp**"]
     LightApp --> DApp
-    
-    %% Web3 Layer
-    DApp --> Web3Layer[web3.js/ether.js]
-    Web3Layer --> Web3API[Web3 API]
-    
-    %% Transaction Operations
-    Web3API --> Sign[Sign*]
-    Web3API --> Approve[Approve]
-    Web3API --> IncreaseAllowance[increaseAllowance]
-    Web3API --> Transfer[Transfer]
-    Web3API --> More[...]
-    
-    %% Blockchain Connection
-    Web3API --> Blockchain[Blockchain]
-    Blockchain --> IPFS[IPFS/Arweave]
-    Blockchain --> SmartContract[Smart Contract]
-    
-    %% Backup Wallet Section
-    MnemonicPhrase --> BackupWallet[Backup Wallet]
-    BackupWallet --> Encryption{Encryption}
-    Encryption --> Cloud[Cloud]
-    Encryption --> Paper[Paper]
-    Encryption --> Device[Device]
-    Encryption --> Brain[Brain]
-    
-    %% Storage Methods
-    BackupWallet --> WithPassword[With Password]
-    BackupWallet --> Plaintext[Plaintext]
-    
-    %% Base Infrastructure
-    subgraph Base[Base Infrastructure]
-        Network[Network]
-        CDN[CDN]
-        Browser[Browser]
-        Ellipsis[...]
-        PC[PC]
-        Mobile[Mobile]
-    end
-    
-    PrepareWallet -.runs on.-> Base
-    
-    %% Styling
+    DApp --> Web3Layer["web3.js/ether.js"]
+    Web3Layer --> Web3API["Web3 API"]
+    Web3API --> Sign["Sign*"] & Approve["Approve"] & IncreaseAllowance["increaseAllowance"] & Transfer["Transfer"] & Blockchain["Blockchain"]
+    Blockchain --> IPFS["IPFS/Arweave"] & SmartContract["Smart Contract"]
+    BackupWallet --> Encryption{"**Encryption**"} & WithPassword["With Password"] & Plaintext["Plaintext"]
+    Encryption --> Cloud["Cloud"] & Paper["Paper"] & Device["Device"] & Brain["Brain"]
+    PrepareWallet -. runs on .-> Base
+    SSS@{ shape: rect}
+     Keyless:::walletType
+     SSS:::security
+     MultiSig:::security
+     UseWallet:::walletType
+     ColdWallet:::walletType
+     HotWallet:::walletType
+     Sign:::operation
+     Approve:::operation
+     IncreaseAllowance:::operation
+     Transfer:::operation
+     Blockchain:::blockchain
+     IPFS:::blockchain
+     SmartContract:::blockchain
+     Encryption:::security
+     WithPassword:::security
+     Plaintext:::security
     classDef walletType fill:#e1f5ff,stroke:#0066cc,stroke-width:2px
     classDef security fill:#fff4e1,stroke:#cc8800,stroke-width:2px
     classDef blockchain fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     classDef operation fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    
-    class UseWallet,HotWallet,ColdWallet,Keyless walletType
-    class SSS,MultiSig,Encryption,WithPassword,Plaintext security
-    class Blockchain,IPFS,SmartContract blockchain
-    class Sign,Approve,IncreaseAllowance,Transfer operation
+    style User color:#000000

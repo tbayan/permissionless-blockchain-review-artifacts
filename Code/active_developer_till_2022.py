@@ -23,9 +23,8 @@ date_objects = [datetime.strptime(d, '%Y-%m') for d in dates]
 fig, ax = plt.subplots(figsize=(14, 6))
 
 
-ax.plot(date_objects, developers, linewidth=2.5, color='#5DADE2', marker='o', 
-        markersize=4, markerfacecolor='#5DADE2', markeredgewidth=0)
-
+ax.plot(date_objects, developers, linewidth=2, color='blue', marker='o', 
+        markersize=4, markerfacecolor='black', markeredgewidth=0)
 
 ax.set_xlabel('Year', fontsize=12, fontweight='bold')
 ax.set_ylabel('Developers', fontsize=12, fontweight='bold')

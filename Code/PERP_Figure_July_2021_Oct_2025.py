@@ -56,7 +56,7 @@ plt.rcParams['font.size'] = 12
 
 # Plot bar chart
 x_pos = np.arange(len(dates))
-plt.bar(x_pos, volumes, color='#333333', edgecolor='black', linewidth=0.5, width=0.8)
+plt.bar(x_pos, volumes, color='blue', edgecolor='black', linewidth=2, width=0.8)
 
 # Grid
 plt.grid(True, linestyle='--', alpha=0.5, color='gray', axis='y')

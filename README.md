@@ -26,3 +26,11 @@ python diagrams/python/fig4_research_trends.py
 All data used was already public. We have added a link to
 a github repo containing scripts etc. that reproduce the
 figures in the paper.
+
+
+## Graphical Abstract
+
+The graphical abstract was generated using React and Recharts.
+- Source: `figures/graphical-abstract/App.tsx`
+- Dependencies: React 18, Recharts 2.10
+- Preview: https://stackblitz.com/edit/[your-project]

@@ -37,6 +37,9 @@ The graphical abstract was generated using React and Recharts.
 
 
 ## How to cite （BibTeX and APA）
+
+**BibTeX:**
+```bibtex
 @article{bayan2025permissionless,
   title={Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle},
   author={Bayan, Talgar and Yazici, Adnan and Banach, Richard},
@@ -47,5 +50,6 @@ The graphical abstract was generated using React and Recharts.
   year={2025},
   publisher={MDPI}
 }
-
-{Bayan, T., Yazici, A., & Banach, R. (2025). Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle. Future Internet, 17(12), 547.}
+```
+**APA:**
+Bayan, T., Yazici, A., & Banach, R. (2025). Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle. Future Internet, 17(12), 547.

@@ -10,6 +10,8 @@ DOI Link: https://doi.org/10.3390/fi17120547
 - **Data** – Small example data files (CSV/JSON) used for the visualisations.  
 - **references.bib** – Citation file, reference mapping, and license information.
 
+![Graphical Abstract](Figures/GA_paper_02.PNG)
+
 ## Usage
 To reproduce or view the figures:
 

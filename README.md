@@ -34,3 +34,18 @@ The graphical abstract was generated using React and Recharts.
 - Source: `figures/graphical-abstract/App.tsx`
 - Dependencies: React 18, Recharts 2.10
 - Preview: https://stackblitz.com/edit/vitejs-vite-eznglyde?file=src%2FApp.tsx
+
+
+## How to cite （BibTeX and APA）
+@article{bayan2025permissionless,
+  title={Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle},
+  author={Bayan, Talgar and Yazici, Adnan and Banach, Richard},
+  journal={Future Internet},
+  volume={17},
+  number={12},
+  pages={547},
+  year={2025},
+  publisher={MDPI}
+}
+
+{Bayan, T., Yazici, A., & Banach, R. (2025). Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle. Future Internet, 17(12), 547.}

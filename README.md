@@ -52,4 +52,6 @@ The graphical abstract was generated using React and Recharts.
 }
 ```
 **APA:**
+```
 Bayan, T., Yazici, A., & Banach, R. (2025). Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle. Future Internet, 17(12), 547.
+```

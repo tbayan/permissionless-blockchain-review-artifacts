@@ -1,6 +1,7 @@
 # Permissionless Blockchain: Recent Trends, Privacy Concerns, Potential Solutions, and Secure Development Lifecycle
 
-This repository contains the supporting materials for the review paper submitted to the journal *MDPI Future Internet*.
+This repository contains the supporting materials for the review paper submitted to the journal *MDPI Future Internet*. 
+DOI Link: https://doi.org/10.3390/fi17120547
 
 ## Structure
 - **Figures_Mermaid** – Mermaid diagram source files (`.mmd`) for conceptual and architectural figures.  
@@ -55,3 +56,5 @@ The graphical abstract was generated using React and Recharts.
 ```
 Bayan, T., Yazici, A., & Banach, R. (2025). Permissionless Blockchain Recent Trends, Privacy Concerns, Potential Solutions and Secure Development Lifecycle. Future Internet, 17(12), 547.
 ```
+
+DOI Link: https://doi.org/10.3390/fi17120547

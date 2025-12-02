@@ -24,9 +24,8 @@ python diagrams/python/fig4_research_trends.py
 
 
 ## Data Availability Statement: 
-All data used was already public. We have added a link to
-a GitHub repo containing scripts, etc. that reproduce the
-figures in the paper.
+All data used in the paper were taken from the public domain. The scripts and programs used to produce the figures in the paper are openly available at 
+https://github.com/tbayan/permissionless-blockchain-review-artifacts/tree/main (accessed on 8 November 2025).
 
 
 ## Graphical Abstract
